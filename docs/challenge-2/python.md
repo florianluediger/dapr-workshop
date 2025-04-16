@@ -18,7 +18,6 @@ To learn more about the Dapr Service Invocation building block, refer to the [Da
 Navigate to the root of your project. Before you start coding, install the dependencies:
 
 ```bash
-```bash
 # Create virtual environment
 python3 -m venv env
 source env/bin/activate
@@ -49,6 +48,12 @@ from dapr.clients import DaprClient
 ```
 
 ## Create the app route
+
+Import the requests package to make HTTP requests:
+
+```python
+import requests
+```
 
 Modify the method `process_order`, by replacing `# TODO: Add Service invocation code` with the code below, making sure the proper spacing is maintained:
 
@@ -203,4 +208,4 @@ curl -H 'Content-Type: application/json' \
 
 ## Next Steps
 
-Now that the services are updating the event information for every order step, you need to make sure that this information is being updated in the Redis state store. You will do this in the next challenge using Dapr [Pub/Sub](/docs/challenge-3/dotnet.md)!
+Now that the services are updating the event information for every order step, you need to make sure that this information is being updated in the Redis state store. You will do this in the next challenge using Dapr [Pub/Sub](/docs/challenge-3/python.md)!
